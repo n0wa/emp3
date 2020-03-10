@@ -3,29 +3,28 @@
 #       Date: March 8, 2020
 #
 #--------------------------------------------
-
-
 #!flask/bin/python
 from flask import Flask, jsonify
 from flask import abort
 from flask_sqlalchemy import SQLAlchemy 
 from flask_marshmallow import Marshmallow
 
-#SQL query
+#SQL query libraries
 import pyodbc
 import sqlalchemy as sal
 from sqlalchemy import create_engine
 import pandas as pd
-#---------------------------------
+#-------------------------------------------
+
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@52.179.195.78:1433/test?driver=SQL+Server+Native+Client+11.0"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@52.179.195.78:1433/test?driver=SQL+Server+Native+Client+10.0" #11.0
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Init db
 db = SQLAlchemy(app)
 
-# Init ma
+# Initialized Marshmallow
 ma = Marshmallow(app)
 
 
