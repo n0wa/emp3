@@ -1,3 +1,10 @@
+#--------------------------------------
+#       Author: Na Wang 
+#       Date: March 8, 2020
+#
+#--------------------------------------------
+
+
 #!flask/bin/python
 from flask import Flask, jsonify
 from flask import abort
@@ -58,17 +65,4 @@ if __name__ == '__main__':
   app.run(debug=True)
 
   
-#--------------------------------------
-#SQL Query
-#sal.create_engine('dialect+driver://nk:nK1234@52.179.195.78:1433/test')
-#sal.create_engine('mssql+pyodbc://nk:nK1234@52.179.195.78:1433/test?driver=ODBC+Driver+17+for+SQL+Server')
-#engine = sal.create_engine("mssql+pyodbc://nk:nK1234@52.179.195.78:1433/test?driver=SQL+Server+Native+Client+11.0")
-
-
-# establishing the connection to the databse using engine as an interface
-#conn = engine.connect()
-
-#conn.close()
-#--------------------------------------------
-
 
