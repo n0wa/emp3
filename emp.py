@@ -1,6 +1,6 @@
 #--------------------------------------
-#       Author: Na Wang 
-#       Date: March 8, 2020
+#     
+# 
 #
 #--------------------------------------------
 #!flask/bin/python
@@ -18,7 +18,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@52.179.195.78:1433/test?driver=SQL+Server+Native+Client+12.0" #11.0
+app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@52.179.195.78:1433/test?driver=SQL+Server+Native+Client+11.0" #11.0
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Init db
