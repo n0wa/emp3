@@ -38,7 +38,7 @@ class Emp(db.Model):
 # Static test
 @app.route("/")
 def hello():
-     return "Hello Noah!”
+  return "Hello Noah!"
 
 # Employee Schema
 class  EmpSchema(ma.Schema):
