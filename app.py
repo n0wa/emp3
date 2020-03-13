@@ -36,9 +36,9 @@ class Emp(db.Model):
   zip = db.Column(db.String(5))
   
 # Static test
-@app.route("/")
+@app.route('/')
 def hello():
-  return "Hello Noah!"
+  return 'Hello Noah!'
 
 # Employee Schema
 class  EmpSchema(ma.Schema):
