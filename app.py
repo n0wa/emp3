@@ -18,7 +18,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver=SQL+Server+Native+Client+17.4" #11.0
+app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver=SQL+Server+Native+Client+17.0" #11.0
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Init db
