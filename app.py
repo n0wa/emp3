@@ -35,11 +35,11 @@ class Emp(db.Model):
   name = db.Column(db.String(100))
   zip = db.Column(db.String(5))
   
-# Get All Employees
-@app.route('/')
-def get_emps():
-  return ('ok 1')
- 
+# Static test
+@app.route("/")
+def hello():
+     return "Hello Noah!”
+
 # Employee Schema
 class  EmpSchema(ma.Schema):
   class Meta:
