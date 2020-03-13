@@ -18,7 +18,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@52.184.187.170:1433/test?driver=SQL+Server+Native+Client+11.0" #11.0
+app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver=SQL+Server+Native+Client+17.4" #11.0
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Init db
@@ -38,7 +38,7 @@ class Emp(db.Model):
 # Static test
 @app.route('/')
 def hello():
-  return 'Hello Noah!'
+  return 'Specify correct URL!'
 
 # Employee Schema
 class  EmpSchema(ma.Schema):
