@@ -20,7 +20,7 @@ import urllib3
 import urllib.parse
 
 # Configure Database URI: 
-params = urllib.parse.quote_plus("DRIVER={ODBC Driver 13 for SQL Server};SERVER=104.46.110.38;DATABASE=test;UID=nk;PWD=nK1234")
+params = urllib.parse.quote_plus("DRIVER={ODBC Driver 17 for SQL Server};SERVER=104.46.110.38;DATABASE=test;UID=nk;PWD=nK1234")
 #-------------------------------------------
 
 app = Flask(__name__)
