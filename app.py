@@ -14,12 +14,20 @@ import pyodbc
 import sqlalchemy as sal
 from sqlalchemy import create_engine
 import pandas as pd
+# ------------------------------------------
+import urllib.parse 
+
+# Configure Database URI: 
+params = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER=104.46.110.38;DATABASE=test;UID=nk;PWD=nK1234")
 #-------------------------------------------
 
 app = Flask(__name__)
+#-----------------------------
+app.config['SECRET_KEY'] = 'supersecret'
+app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % params
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+#-----------------------------
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver=SQL+Server+17"#SQL+Server+Native+Client+1" #11.0
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Init db
 db = SQLAlchemy(app)
