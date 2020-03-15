@@ -4,6 +4,7 @@
 #
 #--------------------------------------------
 #!flask/bin/python
+#!/usr/bin/env python
 from flask import Flask, jsonify
 from flask import abort
 from flask_sqlalchemy import SQLAlchemy 
