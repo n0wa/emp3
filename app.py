@@ -16,7 +16,8 @@ import sqlalchemy as sal
 from sqlalchemy import create_engine
 import pandas as pd
 # ------------------------------------------
-import urllib.parse 
+import urllib3 
+import urllib.parse
 
 # Configure Database URI: 
 params = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER=104.46.110.38;DATABASE=test;UID=nk;PWD=nK1234")
