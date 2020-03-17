@@ -1,25 +1,23 @@
 #--------------------------------------
-#     Author: Na Wang
+#     Author: Noah Kawasaki
 #     Date: March 8, 2020
 #
 #--------------------------------------------
 #!flask/bin/python
 from flask import Flask, jsonify
-from flask import abort
+#from flask import abort
 from flask_sqlalchemy import SQLAlchemy 
 from flask_marshmallow import Marshmallow
 
 #SQL query libraries
 import pyodbc
-import sqlalchemy as sal
-from sqlalchemy import create_engine
+#import sqlalchemy as sal
+#from sqlalchemy import create_engine
 import pandas as pd
 #-------------------------------------------
 
 app = Flask(__name__)
 
-#app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver={ODBC+Driver+17+for+SQL+Server}"#11.0
-#app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver=ODBC+Driver+17+for+SQL+Server"#11.0
 app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver=ODBC Driver 17 for SQL+Server"#11.0
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
