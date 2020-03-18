@@ -1,6 +1,8 @@
 #--------------------------------------
-#     Author: Noah Kawasaki
-#     Date: March 8, 2020
+#     Author:: Noah Kawasaki
+#     Date:: March 8, 2020
+#
+#
 #
 #--------------------------------------------
 #!flask/bin/python
@@ -18,7 +20,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver=ODBC Driver 17 for SQL+Server"#11.0
+app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@104.46.110.38:1433/test?driver=ODBC Driver 17 for SQL Server"#11.0
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Init db
