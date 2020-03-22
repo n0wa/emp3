@@ -25,7 +25,7 @@ from azure.common.credentials import ServicePrincipalCredentials
 app = Flask(__name__)
 
 
-VAULT_URL = 'https://devcu-kv.vault.azure.net/'  #'https://devcu-kv.vault.azure.net/'
+VAULT_URL = 'https://devcu-kv.vault.azure.net/' 
 USR_SECRET = 'usr'
 PASS_SECRET = 'passwd'
 USR_SECRET_VERSION = '0bdad91564384ad0a459ad5ba5c941c5'
@@ -43,7 +43,7 @@ Usr = client.get_secret(VAULT_URL, USR_SECRET, USR_SECRET_VERSION ).value
 Pass = client.get_secret(VAULT_URL, PASS_SECRET, PASS_SECRET_VERSION ).value
 
 
-#print('Username: ' +Usr +'\n Password: ' +Pass)
+print('Username: ' +Usr +'\n Password: ' +Pass)
 #app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://nk:nK1234@52.179.161.106:1433/test?driver=ODBC Driver 17 for SQL Server"#11.0
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc://"+ Usr+ ":" +Pass + "@52.179.161.106:1433/test?driver=ODBC Driver 17 for SQL Server"
